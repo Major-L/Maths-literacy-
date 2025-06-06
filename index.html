@@ -3,51 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Magic for Kids</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/modules.css">
+    <title>Little Learner's Playground</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Math Magic!</h1>
-            <button id="soundToggle" class="sound-btn">🔊</button>
+    <div class="container">
+        <header>
+            <h1>Little Learner's Playground</h1>
+            <div class="character">🐻</div>
         </header>
         
-        <main class="main-content">
-            <div class="home-screen">
+        <main>
+            <div class="welcome-screen">
+                <h2>Hello, Little Friend!</h2>
+                <p>Let's learn and play together!</p>
+                <button id="start-btn">Start Learning</button>
+            </div>
+            
+            <div class="activities hidden">
                 <h2>What would you like to learn today?</h2>
-                <div class="menu-grid">
-                    <button class="menu-btn" data-module="numbers">
-                        <span>Numbers 1-20</span>
-                    </button>
-                    <button class="menu-btn" data-module="counting">
-                        <span>Counting Objects</span>
-                    </button>
-                    <button class="menu-btn" data-module="addition">
-                        <span>Simple Math</span>
-                    </button>
-                    <button class="menu-btn" data-module="shapes">
-                        <span>Shapes & Patterns</span>
-                    </button>
-                    <button class="menu-btn" data-module="matching">
-                        <span>Number Matching</span>
-                    </button>
+                <div class="activity-buttons">
+                    <button class="activity-btn" data-activity="colors">🌈 Colors</button>
+                    <button class="activity-btn" data-activity="shapes">🔺 Shapes</button>
+                    <button class="activity-btn" data-activity="numbers">🔢 Numbers</button>
+                    <button class="activity-btn" data-activity="letters">🔤 Letters</button>
                 </div>
             </div>
             
-            <div class="module-container hidden">
+            <div class="activity-screen hidden">
                 <button class="back-btn">← Back</button>
-                <div class="module-content"></div>
+                <div class="activity-content"></div>
             </div>
         </main>
         
-        <footer class="app-footer">
-            <p>Made with ♥ for little learners</p>
+        <footer>
+            <p>Made with ❤️ for little learners</p>
         </footer>
     </div>
     
-    <script src="scripts/main.js"></script>
+    <audio id="click-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3"></audio>
+    <audio id="correct-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3"></audio>
+    
+    <script src="script.js"></script>
 </body>
 </html>

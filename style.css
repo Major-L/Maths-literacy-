@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comic Neue', cursive;
+    background-color: #f0f9ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #4a6fa5;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.character {
+    font-size: 4rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-screen, .activities, .activity-screen {
+    text-align: center;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.welcome-screen h2 {
+    color: #ff7e5f;
+    margin-bottom: 15px;
+    font-size: 2rem;
+}
+
+.welcome-screen p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: #6bb9f0;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: 'Comic Neue', cursive;
+    transition: all 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #4a9bd9;
+    transform: scale(1.05);
+}
+
+.activities h2 {
+    color: #4a6fa5;
+    margin-bottom: 30px;
+}
+
+.activity-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.activity-btn {
+    min-width: 150px;
+}
+
+.back-btn {
+    background-color: #ff7e5f;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.activity-content {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-option {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    color: white;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.shape-option {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6bb9f0;
+    color: white;
+    font-size: 2rem;
+}
+
+.number-option, .letter-option {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ff7e5f;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.number-option:hover, .letter-option:hover {
+    transform: scale(1.1);
+    background-color: #e66a4a;
+}
+
+.feedback {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    min-height: 50px;
+}
+
+.correct {
+    color: #4caf50;
+}
+
+.incorrect {
+    color: #f44336;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #4a6fa5;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .activity-buttons {
+        flex-direction: column;
+    }
+    
+    .activity-btn {
+        width: 100%;
+    }
+}
